@@ -16,8 +16,6 @@ internal final class FeedItemsMapper {
         }
     }
     
-    
-    
     private struct Item: Decodable {
         let id: UUID
         let description: String?
@@ -39,7 +37,6 @@ internal final class FeedItemsMapper {
               let root = try?  JSONDecoder().decode(Root.self, from: data)else{
             return .failure(.invalidData)
         }
-        
         return .success(root.feed)
     }
 }
