@@ -161,6 +161,7 @@ class URLSessionHTTPClientTests: XCTestCase {
         static func stopInterceptingRequest(){
             URLProtocol.unregisterClass(URLProtocolStub.self)
             stub = nil
+            requestObserver = nil
         }
         
         override func stopLoading() {}
