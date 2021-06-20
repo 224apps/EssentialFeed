@@ -132,10 +132,10 @@
 		4554191B2677E915000B1340 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				45541959267B99DE000B1340 /* Helpers */,
-				45541989267ED5A3000B1340 /* Feed Cache */,
 				4554191E2677E915000B1340 /* Info.plist */,
 				4554194E267A7BE3000B1340 /* Feed API */,
+				45541989267ED5A3000B1340 /* Feed Cache */,
+				45541959267B99DE000B1340 /* Helpers */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
