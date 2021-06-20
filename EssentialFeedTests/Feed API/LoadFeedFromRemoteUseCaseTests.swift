@@ -78,9 +78,9 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     func test_load_deliversItemsOn200HTTPResponseWithJSONItems(){
         let (sut, client) = makeSUT()
         
-        let item1 = makeItem(id: UUID(), imageURL: URL(string: "http://a-url.com")!)
+        let item1 = makeItem(id: UUID(), url: URL(string: "http://a-url.com")!)
         let item2 = makeItem(id:UUID(), description: "a description",
-                             location: "a location", imageURL: URL(string: "http://a-url.com")!)
+                             location: "a location", url: URL(string: "http://a-url.com")!)
         
         let items = [ item1.model, item2.model]
         
@@ -115,15 +115,15 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         return  (sut, client)
     }
 
-    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedItem, json:[ String: Any]) {
+    private func makeItem(id: UUID, description: String? = nil, location: String? = nil, url: URL) -> (model: FeedImage, json:[ String: Any]) {
         
-        let item = FeedItem(id:id, description: description,location: location,imageURL: imageURL)
+        let item = FeedImage(id:id, description: description,location: location,url: url)
         
         let json = [
             "id": item.id.uuidString,
             "description": item.description,
             "location": item.location,
-            "image": item.imageURL.absoluteString
+            "image": item.url.absoluteString
         ].reduce(into: [String: Any]()){ (acc, e) in
             if let value = e.value { acc[e.key] = value }
         }
