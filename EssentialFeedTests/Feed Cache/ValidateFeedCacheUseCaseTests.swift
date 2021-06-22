@@ -39,7 +39,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         let lessThanSevenDaysCacheTimestamp = fixedCurrentDate.adding(days: -7).adding(days: 1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         
-        sut.load{_ in }
+        sut.validateCache()
         store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysCacheTimestamp)
         
         XCTAssertEqual(store.receivedMessages, [.retrieve])
