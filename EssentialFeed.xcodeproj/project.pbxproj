@@ -40,7 +40,8 @@
 		45541A1326838E5F000B1340 /* XCTestcase+FailableInsertionFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A1226838E5F000B1340 /* XCTestcase+FailableInsertionFeedStoreSpecs.swift */; };
 		45541A1826838F08000B1340 /* XCTestcase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A1726838F08000B1340 /* XCTestcase+FailableDeleteFeedStoreSpecs.swift */; };
 		45541A2426839322000B1340 /* CoreDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A2326839322000B1340 /* CoreDataStoreTests.swift */; };
-		45541A2A268394C7000B1340 /* ManagedCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45541A28268394C7000B1340 /* ManagedCache.xcdatamodeld */; };
+		45541A5A2683A948000B1340 /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45541A582683A948000B1340 /* FeedStore.xcdatamodeld */; };
+		45541A5F2683AB62000B1340 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A5E2683AB62000B1340 /* CoreDataFeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +98,8 @@
 		45541A1226838E5F000B1340 /* XCTestcase+FailableInsertionFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestcase+FailableInsertionFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		45541A1726838F08000B1340 /* XCTestcase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestcase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		45541A2326839322000B1340 /* CoreDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreTests.swift; sourceTree = "<group>"; };
-		45541A29268394C7000B1340 /* ManagedCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManagedCache.xcdatamodel; sourceTree = "<group>"; };
+		45541A592683A948000B1340 /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
+		45541A5E2683AB62000B1340 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +241,9 @@
 				455419A4267F92F6000B1340 /* FeedStore.swift */,
 				455419AE267F9F8C000B1340 /* LocalFeedImage.swift */,
 				455419E52681783D000B1340 /* FeedCachePolicy.swift */,
+				45541A582683A948000B1340 /* FeedStore.xcdatamodeld */,
 				455419F2268252A0000B1340 /* CodableFeedStore.swift */,
-				45541A28268394C7000B1340 /* ManagedCache.xcdatamodeld */,
+				45541A5E2683AB62000B1340 /* CoreDataFeedStore.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -405,15 +408,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45541A5A2683A948000B1340 /* FeedStore.xcdatamodeld in Sources */,
 				45541949267A5CAD000B1340 /* FeedItemsMapper.swift in Sources */,
 				455418F92677D435000B1340 /* FeedLoader.swift in Sources */,
 				455419AA267F9F5A000B1340 /* RemoteFeedItem.swift in Sources */,
 				455419E62681783D000B1340 /* FeedCachePolicy.swift in Sources */,
 				4554192F267807C5000B1340 /* RemoteFeedLoader.swift in Sources */,
+				45541A5F2683AB62000B1340 /* CoreDataFeedStore.swift in Sources */,
 				455419AF267F9F8C000B1340 /* LocalFeedImage.swift in Sources */,
 				455419A5267F92F6000B1340 /* FeedStore.swift in Sources */,
 				4554199D267F9262000B1340 /* LocalFeedLoader.swift in Sources */,
-				45541A2A268394C7000B1340 /* ManagedCache.xcdatamodeld in Sources */,
 				455419F3268252A0000B1340 /* CodableFeedStore.swift in Sources */,
 				45541941267A5AEB000B1340 /* HTTPClient.swift in Sources */,
 				455418F52677D3AA000B1340 /* FeedItem.swift in Sources */,
@@ -758,13 +762,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		45541A28268394C7000B1340 /* ManagedCache.xcdatamodeld */ = {
+		45541A582683A948000B1340 /* FeedStore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				45541A29268394C7000B1340 /* ManagedCache.xcdatamodel */,
+				45541A592683A948000B1340 /* FeedStore.xcdatamodel */,
 			);
-			currentVersion = 45541A29268394C7000B1340 /* ManagedCache.xcdatamodel */;
-			path = ManagedCache.xcdatamodeld;
+			currentVersion = 45541A592683A948000B1340 /* FeedStore.xcdatamodel */;
+			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
