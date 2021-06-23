@@ -20,27 +20,27 @@ public final class CoreDataFeedStore: FeedStore {
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
         let context = self.context
-                context.perform {
-                    do {
-                        if let cache = try ManagedCache.find(in: context){
-                            completion(.found(feed: cache.feed.compactMap { ($0 as? ManagedFeedImage) }
-                                                .map {
-                                                    LocalFeedImage(id: $0.id, description: $0.imageDescription, location: $0.location, url: $0.url)
-                                                }, timestamp: cache.timestamp))
-                        } else {
-                            completion(.empty)
-                        }
-                    } catch {
-                        completion(.failure(error))
-                    }
+        context.perform {
+            do {
+                if let cache = try ManagedCache.find(in: context){
+                    completion(.found(feed: cache.feed.compactMap { ($0 as? ManagedFeedImage) }
+                                        .map {
+                                            LocalFeedImage(id: $0.id, description: $0.imageDescription, location: $0.location, url: $0.url)
+                                        }, timestamp: cache.timestamp))
+                } else {
+                    completion(.empty)
                 }
+            } catch {
+                completion(.failure(error))
+            }
+        }
     }
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         let context = self.context
         context.perform {
             do {
-                let managedCache = ManagedCache(context: context)
+                let managedCache =  try ManagedCache.newUniqueInstance(in: context)
                 managedCache.timestamp = timestamp
                 managedCache.feed = NSOrderedSet(array: feed.map { local in
                     let managed = ManagedFeedImage(context: context)
@@ -50,7 +50,7 @@ public final class CoreDataFeedStore: FeedStore {
                     managed.url = local.url
                     return managed
                 })
-
+                
                 try context.save()
                 completion(nil)
             } catch {
@@ -71,7 +71,7 @@ private extension NSPersistentContainer {
         case modelNotFound
         case failedToLoadPersistentStores(Swift.Error)
     }
-
+    
     static func load(modelName name: String, url: URL, in bundle: Bundle) throws -> NSPersistentContainer {
         guard let model = NSManagedObjectModel.with(name: name, in: bundle) else {
             throw LoadingError.modelNotFound
@@ -84,7 +84,7 @@ private extension NSPersistentContainer {
         var loadError: Swift.Error?
         container.loadPersistentStores { loadError = $1 }
         try loadError.map { throw LoadingError.failedToLoadPersistentStores($0) }
-
+        
         return container
     }
 }
@@ -104,14 +104,19 @@ private class ManagedCache: NSManagedObject {
     @NSManaged var feed: NSOrderedSet
     
     static func find(in context: NSManagedObjectContext) throws -> ManagedCache? {
-            let request = NSFetchRequest<ManagedCache>(entityName: entity().name!)
-            request.returnsObjectsAsFaults = false
-            return try context.fetch(request).first
-        }
+        let request = NSFetchRequest<ManagedCache>(entityName: entity().name!)
+        request.returnsObjectsAsFaults = false
+        return try context.fetch(request).first
+    }
+    
+    static func newUniqueInstance(in context: NSManagedObjectContext) throws -> ManagedCache {
+        try find(in: context).map(context.delete)
+        return ManagedCache(context: context)
+    }
     
     var localFeed: [LocalFeedImage] {
-            return feed.compactMap { ($0 as? ManagedFeedImage)?.local }
-        }
+        return feed.compactMap { ($0 as? ManagedFeedImage)?.local }
+    }
 }
 
 @objc(ManagedFeedImage)
