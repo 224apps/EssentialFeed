@@ -36,6 +36,7 @@
 		455419F3268252A0000B1340 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455419F2268252A0000B1340 /* CodableFeedStore.swift */; };
 		45541A012683824B000B1340 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A002683824B000B1340 /* FeedStoreSpecs.swift */; };
 		45541A0626838405000B1340 /* XCTestcast+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A0526838405000B1340 /* XCTestcast+FeedStoreSpecs.swift */; };
+		45541A0B26838D7F000B1340 /* XCTestcast+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541A0A26838D7F000B1340 /* XCTestcast+FailableRetrieveFeedStoreSpecs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		455419F2268252A0000B1340 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 		45541A002683824B000B1340 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		45541A0526838405000B1340 /* XCTestcast+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestcast+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
+		45541A0A26838D7F000B1340 /* XCTestcast+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestcast+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				455419EA2681A306000B1340 /* CodableFeedStoreTests.swift */,
 				45541A002683824B000B1340 /* FeedStoreSpecs.swift */,
 				45541A0526838405000B1340 /* XCTestcast+FeedStoreSpecs.swift */,
+				45541A0A26838D7F000B1340 /* XCTestcast+FailableRetrieveFeedStoreSpecs.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				455419C0267FA726000B1340 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				45541A012683824B000B1340 /* FeedStoreSpecs.swift in Sources */,
 				45541956267A8AA7000B1340 /* URLSessionHTTPClientTests.swift in Sources */,
+				45541A0B26838D7F000B1340 /* XCTestcast+FailableRetrieveFeedStoreSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
