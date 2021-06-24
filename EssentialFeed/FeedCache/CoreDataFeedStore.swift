@@ -22,12 +22,12 @@ public final class CoreDataFeedStore: FeedStore {
         perform{ context in
             do {
                 if let cache = try ManagedCache.find(in: context){
-                    completion(.found(feed: cache.feed.compactMap { ($0 as? ManagedFeedImage) }
+                    completion(.success(.found(feed: cache.feed.compactMap { ($0 as? ManagedFeedImage) }
                                         .map {
                                             LocalFeedImage(id: $0.id, description: $0.imageDescription, location: $0.location, url: $0.url)
-                                        }, timestamp: cache.timestamp))
+                                        }, timestamp: cache.timestamp)))
                 } else {
-                    completion(.empty)
+                    completion(.success(.empty))
                 }
             } catch {
                 completion(.failure(error))
