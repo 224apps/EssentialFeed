@@ -46,6 +46,7 @@
 		45541A7E2683EA54000B1340 /* FeedCacheTestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455419D8268168E7000B1340 /* FeedCacheTestsHelpers.swift */; };
 		45541A832683EA69000B1340 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455419DD268169B6000B1340 /* SharedTestHelpers.swift */; };
 		45541B8526857709000B1340 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45541B7C26857709000B1340 /* EssentialFeediOS.framework */; };
+		45541BB72685B3C6000B1340 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		45541B7F26857709000B1340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45541B8426857709000B1340 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45541B8B26857709000B1340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				45541B8B26857709000B1340 /* Info.plist */,
+				45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 					};
 					45541B8326857709000B1340 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -646,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45541BB72685B3C6000B1340 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1027,7 @@
 		45541B9126857709000B1340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XGX6TD7GL;
 				INFOPLIST_FILE = EssentialFeediOSTests/Info.plist;
@@ -1034,6 +1040,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.224apps.EssentialFeediOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1042,6 +1049,7 @@
 		45541B9226857709000B1340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XGX6TD7GL;
 				INFOPLIST_FILE = EssentialFeediOSTests/Info.plist;
