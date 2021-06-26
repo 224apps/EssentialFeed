@@ -52,7 +52,7 @@ final class FeedViewController: UITableViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.count
     }
-
+    
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = tableModel[indexPath.row]
         let cell = FeedImageCell()
@@ -64,8 +64,9 @@ final class FeedViewController: UITableViewController {
         cell.feedImageContainer.startShimmering()
         tasks[indexPath] = imageLoader?.loadImageData(from: cellModel.url){[weak cell] result in
             let data = try? result.get()
-            cell?.feedImageView.image = data.map(UIImage.init) ?? nil
-            cell?.feedImageRetryButton.isHidden = (data != nil)
+            let image = data.map(UIImage.init) ?? nil
+            cell?.feedImageView.image = image
+            cell?.feedImageRetryButton.isHidden = (image != nil)
             cell?.feedImageContainer.stopShimmering()
         }
         return cell
