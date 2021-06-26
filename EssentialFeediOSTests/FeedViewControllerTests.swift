@@ -74,6 +74,8 @@ final class FeedViewControllerTests: XCTestCase {
         assertThat(sut, isRendering: [image0])
     }
     
+     
+    
     func test_feedImageView_loadsImageURLWhenVisible() {
         let image0 = makeImage(url: URL(string: "http://url-0.com")!)
         let image1 = makeImage(url: URL(string: "http://url-1.com")!)
@@ -195,6 +197,7 @@ private extension FeedViewController {
         refreshControl?.simulatePullToRefresh()
     }
     
+    @discardableResult
     func simulateFeedImageViewVisible(at index: Int) -> FeedImageCell? {
             return feedImageView(at: index) as? FeedImageCell
         }
