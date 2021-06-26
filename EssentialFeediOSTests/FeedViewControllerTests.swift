@@ -8,48 +8,7 @@
 import XCTest
 import UIKit
 import EssentialFeed
-
-
-final class FeedViewController: UITableViewController {
-    private var loader: FeedLoader?
-    
-    private var tableModel = [FeedImage]()
-    
-    convenience init(loader: FeedLoader) {
-        self.init()
-        self.loader = loader
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-        load()
-    }
-    
-    @objc private func load(){
-        refreshControl?.beginRefreshing()
-        loader?.load { [weak self] result in
-                    self?.tableModel = (try? result.get()) ?? []
-                    self?.tableView.reloadData()
-            self?.refreshControl?.endRefreshing()
-        }
-    }
-    
-    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableModel.count
-    }
-
-    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellModel = tableModel[indexPath.row]
-        let cell = FeedImageCell()
-        cell.locationContainer.isHidden = (cellModel.location == nil)
-        cell.locationLabel.text = cellModel.location
-        cell.descriptionLabel.text = cellModel.description
-        return cell
-    }
-}
-
+@testable import EssentialFeediOS
 
 
 final class FeedViewControllerTests: XCTestCase {
@@ -101,6 +60,20 @@ final class FeedViewControllerTests: XCTestCase {
         loader.completeFeedLoading(with: [image0, image1, image2, image3], at: 1)
         assertThat(sut, isRendering: [image0, image1, image2, image3])
     }
+    
+    func test_loadFeedCompletion_doesNotAlterCurrentRenderingStateOnError() {
+        let image0 = makeImage()
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading(with: [image0], at: 0)
+        assertThat(sut, isRendering: [image0])
+
+        sut.simulateUserInitiatedFeedReload()
+        loader.completeFeedLoadingWithError(at: 1)
+        assertThat(sut, isRendering: [image0])
+    }
+
     
     //MARK: - Helpers
     
@@ -159,6 +132,11 @@ final class FeedViewControllerTests: XCTestCase {
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
                     completions[index](.success(feed))
         }
+        
+        func completeFeedLoadingWithError(at index: Int = 0) {
+                    let error = NSError(domain: "an error", code: 0)
+                    completions[index](.failure(error))
+                }
     }
 }
 

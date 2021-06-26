@@ -50,8 +50,8 @@
 		45541BBF26861708000B1340 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455418D82677D398000B1340 /* EssentialFeed.framework */; platformFilter = ios; };
 		45541BC026861708000B1340 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 455418D82677D398000B1340 /* EssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45541BC92686185E000B1340 /* XCTestCase+MemoryLeaksTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554195A267B99F7000B1340 /* XCTestCase+MemoryLeaksTracking.swift */; };
-		45541BD02686EEEE000B1340 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BCF2686EEEE000B1340 /* FeedImageCell.swift */; };
-		45541BE72686EF5A000B1340 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BCF2686EEEE000B1340 /* FeedImageCell.swift */; };
+		45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BCF2686EEEE000B1340 /* FeedImageCell.swift */; };
+		45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BFD2686EFF5000B1340 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +152,7 @@
 		45541B8B26857709000B1340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		45541BCF2686EEEE000B1340 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
+		45541BFD2686EFF5000B1340 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +261,6 @@
 				45541959267B99DE000B1340 /* Helpers */,
 				4554194E267A7BE3000B1340 /* Feed API */,
 				45541989267ED5A3000B1340 /* Feed Cache */,
-				45541BCF2686EEEE000B1340 /* FeedImageCell.swift */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
@@ -363,7 +363,9 @@
 		45541B7D26857709000B1340 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				45541BCF2686EEEE000B1340 /* FeedImageCell.swift */,
 				45541B7F26857709000B1340 /* Info.plist */,
+				45541BFD2686EFF5000B1340 /* FeedViewController.swift */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -645,7 +647,6 @@
 				4554192A2677EB40000B1340 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				4554195B267B99F7000B1340 /* XCTestCase+MemoryLeaksTracking.swift in Sources */,
 				455419C6267FA96B000B1340 /* FeedStoreSpy.swift in Sources */,
-				45541BD02686EEEE000B1340 /* FeedImageCell.swift in Sources */,
 				45541A2426839322000B1340 /* CoreDataStoreTests.swift in Sources */,
 				455419D9268168E7000B1340 /* FeedCacheTestsHelpers.swift in Sources */,
 				45541A0626838405000B1340 /* XCTestcast+FeedStoreSpecs.swift in Sources */,
@@ -683,6 +684,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
+				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +694,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				45541BB72685B3C6000B1340 /* FeedViewControllerTests.swift in Sources */,
-				45541BE72686EF5A000B1340 /* FeedImageCell.swift in Sources */,
 				45541BC92686185E000B1340 /* XCTestCase+MemoryLeaksTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1075,6 +1077,7 @@
 		45541B9126857709000B1340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XGX6TD7GL;
@@ -1097,6 +1100,7 @@
 		45541B9226857709000B1340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XGX6TD7GL;
