@@ -11,11 +11,15 @@ public final class FeedImageCell: UITableViewCell {
     public let locationContainer = UIView()
     public let locationLabel = UILabel()
     public let descriptionLabel = UILabel()
+    public let feedImageContainer = UIView()
 }
 
 private extension FeedImageCell {
     var isShowingLocation: Bool {
         return !locationContainer.isHidden
+    }
+    var isShowingImageLoadingIndicator:Bool {
+        return feedImageContainer.isShimmering
     }
     
     var locationText: String? {
