@@ -54,6 +54,7 @@
 		45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541BFD2686EFF5000B1340 /* FeedViewController.swift */; };
 		45541C2A2687E741000B1340 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541C292687E741000B1340 /* UIView+Shimmering.swift */; };
 		45541C4F26883C56000B1340 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541C4E26883C56000B1340 /* FeedImageDataLoader.swift */; };
+		45541C642688406B000B1340 /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541C632688406B000B1340 /* FeedRefreshViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		45541BFD2686EFF5000B1340 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		45541C292687E741000B1340 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		45541C4E26883C56000B1340 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
+		45541C632688406B000B1340 /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				45541BFD2686EFF5000B1340 /* FeedViewController.swift */,
+				45541C632688406B000B1340 /* FeedRefreshViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45541C4F26883C56000B1340 /* FeedImageDataLoader.swift in Sources */,
+				45541C642688406B000B1340 /* FeedRefreshViewController.swift in Sources */,
 				45541C2A2687E741000B1340 /* UIView+Shimmering.swift in Sources */,
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
