@@ -61,6 +61,7 @@
 		45541CCD268A21D1000B1340 /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CCC268A21D1000B1340 /* FeedRefreshViewController.swift */; };
 		45541CD4268A2988000B1340 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CD3268A2988000B1340 /* FeedImageCellController.swift */; };
 		45541CDC268A2E34000B1340 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CDB268A2E34000B1340 /* FeedUIComposer.swift */; };
+		45541CFE268A3A36000B1340 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CFD268A3A36000B1340 /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		45541CCC268A21D1000B1340 /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
 		45541CD3268A2988000B1340 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		45541CDB268A2E34000B1340 /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
+		45541CFD268A3A36000B1340 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +386,7 @@
 				45541CC4268A1C09000B1340 /* Feed Image Loader */,
 				45541B7F26857709000B1340 /* Info.plist */,
 				45541CB3268A1773000B1340 /* Feed UI */,
+				45541CFB268A3A25000B1340 /* New Group */,
 				45541CBA268A179C000B1340 /* Views */,
 			);
 			path = EssentialFeediOS;
@@ -420,6 +423,7 @@
 		45541CB3268A1773000B1340 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
+				45541CFC268A3A2F000B1340 /* Models */,
 				45541CDA268A2E29000B1340 /* Composers */,
 				45541CB4268A1777000B1340 /* Controllers */,
 			);
@@ -483,6 +487,21 @@
 				45541CDB268A2E34000B1340 /* FeedUIComposer.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		45541CFB268A3A25000B1340 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		45541CFC268A3A2F000B1340 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45541CFD268A3A36000B1340 /* FeedViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -789,6 +808,7 @@
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
 				45541CD4268A2988000B1340 /* FeedImageCellController.swift in Sources */,
+				45541CFE268A3A36000B1340 /* FeedViewModel.swift in Sources */,
 				45541CDC268A2E34000B1340 /* FeedUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
