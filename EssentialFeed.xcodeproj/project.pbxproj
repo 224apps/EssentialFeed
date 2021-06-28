@@ -57,6 +57,7 @@
 		45541C9F2688E8AC000B1340 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541C9E2688E8AC000B1340 /* UIRefreshControl+TestHelpers.swift */; };
 		45541CA62688E8D9000B1340 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CA52688E8D9000B1340 /* UIButton+TestHelpers.swift */; };
 		45541CAD2688E900000B1340 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CAC2688E900000B1340 /* UIControl+TestHelpers.swift */; };
+		45541CC6268A1C1C000B1340 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CC5268A1C1C000B1340 /* FeedImageDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		45541C9E2688E8AC000B1340 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		45541CA52688E8D9000B1340 /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		45541CAC2688E900000B1340 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		45541CC5268A1C1C000B1340 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,10 +375,10 @@
 		45541B7D26857709000B1340 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				45541BCF2686EEEE000B1340 /* FeedImageCell.swift */,
+				45541CC4268A1C09000B1340 /* Feed Image Loader */,
 				45541B7F26857709000B1340 /* Info.plist */,
-				45541BFD2686EFF5000B1340 /* FeedViewController.swift */,
-				45541C292687E741000B1340 /* UIView+Shimmering.swift */,
+				45541CB3268A1773000B1340 /* Feed UI */,
+				45541CBA268A179C000B1340 /* Views */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -384,9 +386,9 @@
 		45541B8826857709000B1340 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				45541C912688E82F000B1340 /* Helpers */,
 				45541B8B26857709000B1340 /* Info.plist */,
-				45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */,
+				45541CC1268A1894000B1340 /* Feed UI */,
+				45541C912688E82F000B1340 /* Helpers */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -407,6 +409,63 @@
 				45541CAC2688E900000B1340 /* UIControl+TestHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		45541CB3268A1773000B1340 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				45541CB4268A1777000B1340 /* Controllers */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		45541CB4268A1777000B1340 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45541BFD2686EFF5000B1340 /* FeedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		45541CBA268A179C000B1340 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45541BCF2686EEEE000B1340 /* FeedImageCell.swift */,
+				45541C292687E741000B1340 /* UIView+Shimmering.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		45541CC1268A1894000B1340 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				45541CC2268A1894000B1340 /* Controllers */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		45541CC2268A1894000B1340 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45541BB62685B3C6000B1340 /* FeedViewControllerTests.swift */,
+				45541CC3268A1894000B1340 /* Helpers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		45541CC3268A1894000B1340 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		45541CC4268A1C09000B1340 /* Feed Image Loader */ = {
+			isa = PBXGroup;
+			children = (
+				45541CC5268A1C1C000B1340 /* FeedImageDataLoader.swift */,
+			);
+			path = "Feed Image Loader";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -707,6 +766,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45541CC6268A1C1C000B1340 /* FeedImageDataLoader.swift in Sources */,
 				45541C2A2687E741000B1340 /* UIView+Shimmering.swift in Sources */,
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
