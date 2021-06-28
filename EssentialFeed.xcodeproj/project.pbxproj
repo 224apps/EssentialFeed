@@ -59,6 +59,7 @@
 		45541CAD2688E900000B1340 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CAC2688E900000B1340 /* UIControl+TestHelpers.swift */; };
 		45541CC6268A1C1C000B1340 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CC5268A1C1C000B1340 /* FeedImageDataLoader.swift */; };
 		45541CCD268A21D1000B1340 /* FeedRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CCC268A21D1000B1340 /* FeedRefreshViewController.swift */; };
+		45541CD4268A2988000B1340 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541CD3268A2988000B1340 /* FeedImageCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		45541CAC2688E900000B1340 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		45541CC5268A1C1C000B1340 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		45541CCC268A21D1000B1340 /* FeedRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRefreshViewController.swift; sourceTree = "<group>"; };
+		45541CD3268A2988000B1340 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +428,7 @@
 			children = (
 				45541BFD2686EFF5000B1340 /* FeedViewController.swift */,
 				45541CCC268A21D1000B1340 /* FeedRefreshViewController.swift */,
+				45541CD3268A2988000B1340 /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				45541C2A2687E741000B1340 /* UIView+Shimmering.swift in Sources */,
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
+				45541CD4268A2988000B1340 /* FeedImageCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
