@@ -5,7 +5,6 @@
 //  Created by Abdoulaye Diallo on 6/28/21.
 //
 
-import UIKit
 import EssentialFeed
 
 final class FeedViewModel {
