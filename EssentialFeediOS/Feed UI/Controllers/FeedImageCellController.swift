@@ -20,8 +20,8 @@ final class FeedImageCellController: FeedImageView {
     private lazy var cell = FeedImageCell()
     
     init(delegate: FeedImageCellControllerDelegate) {
-            self.delegate = delegate
-        }
+        self.delegate = delegate
+    }
     
     func view() -> UITableViewCell {
         delegate.didRequestImage()
@@ -29,15 +29,14 @@ final class FeedImageCellController: FeedImageView {
     }
     
     
-    
-        func display(_ viewModel: FeedImageViewModel<UIImage>) {
+    func display(_ viewModel: FeedImageViewModel<UIImage>) {
         cell.locationContainer.isHidden = !viewModel.hasLocation
         cell.locationLabel.text = viewModel.location
         cell.descriptionLabel.text = viewModel.description
-            cell.feedImageView.image = viewModel.image
-                    cell.feedImageContainer.isShimmering = viewModel.isLoading
-                    cell.feedImageRetryButton.isHidden = !viewModel.shouldRetry
-                    cell.onRetry = delegate.didRequestImage
+        cell.feedImageView.image = viewModel.image
+        cell.feedImageContainer.isShimmering = viewModel.isLoading
+        cell.feedImageRetryButton.isHidden = !viewModel.shouldRetry
+        cell.onRetry = delegate.didRequestImage
     }
     
     func preload() {
@@ -47,7 +46,4 @@ final class FeedImageCellController: FeedImageView {
     func cancelLoad() {
         delegate.didCancelImageRequest()
     }
-    
-    
-    
 }
