@@ -11,12 +11,18 @@ protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 public final class FeedViewController: UITableViewController , UITableViewDataSourcePrefetching, FeedLoadingView{
-
+    
     var delegate: FeedViewControllerDelegate?
     
     var tableModel = [FeedImageCellController](){
-        didSet{
-            tableView.reloadData()
+        didSet {
+            if Thread.isMainThread {
+                tableView.reloadData()
+            } else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                }
+            }
         }
     }
     
@@ -30,6 +36,9 @@ public final class FeedViewController: UITableViewController , UITableViewDataSo
     }
     
     func display(_ viewModel: FeedLoadingViewModel) {
+        guard Thread.isMainThread else {
+            return DispatchQueue.main.async { [weak self] in self?.display(viewModel) }
+        }
         if viewModel.isLoading {
             refreshControl?.beginRefreshing()
         }else{
@@ -61,9 +70,9 @@ public final class FeedViewController: UITableViewController , UITableViewDataSo
     
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
         return tableModel[indexPath.row]
-        }
+    }
     
     private func cancelCellControllerLoad(forRowAt indexPath: IndexPath) {
-            cellController(forRowAt: indexPath).cancelLoad()
-        }
+        cellController(forRowAt: indexPath).cancelLoad()
+    }
 }
