@@ -21,8 +21,6 @@ public final class FeedViewController: UITableViewController , UITableViewDataSo
     }
     
     public override func viewDidLoad() {
-        
-        title =  FeedPresenter.title
         super.viewDidLoad()
         refresh()
     }
