@@ -68,6 +68,7 @@
 		45541D72268D059A000B1340 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45541D71268D0599000B1340 /* Feed.storyboard */; };
 		45541D79268D05CE000B1340 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45541D78268D05CE000B1340 /* Feed.xcassets */; };
 		45541D85268D8F18000B1340 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541D84268D8F18000B1340 /* UITableView+Dequeueing.swift */; };
+		45541D8C268D8FAD000B1340 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541D8B268D8FAD000B1340 /* UIImageView+Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,7 @@
 		45541D71268D0599000B1340 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		45541D78268D05CE000B1340 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		45541D84268D8F18000B1340 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		45541D8B268D8FAD000B1340 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +460,7 @@
 				45541D71268D0599000B1340 /* Feed.storyboard */,
 				45541D78268D05CE000B1340 /* Feed.xcassets */,
 				45541D84268D8F18000B1340 /* UITableView+Dequeueing.swift */,
+				45541D8B268D8FAD000B1340 /* UIImageView+Animations.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				45541D5A268CFF23000B1340 /* FeedLoadingViewModel.swift in Sources */,
 				45541C2A2687E741000B1340 /* UIView+Shimmering.swift in Sources */,
 				45541D53268CF8C0000B1340 /* FeedImagePresenter.swift in Sources */,
+				45541D8C268D8FAD000B1340 /* UIImageView+Animations.swift in Sources */,
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
 				45541D0A268A4FB9000B1340 /* FeedImageViewModel.swift in Sources */,
