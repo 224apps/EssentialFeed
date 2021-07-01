@@ -126,9 +126,20 @@ Location</string>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="miA-sd-NIA">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh" destination="srK-yt-6sq" eventType="valueChanged" id="7xb-GR-4TH"/>
+                        </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="refreshController" destination="srK-yt-6sq" id="HEs-Z9-HpA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imh-Op-RgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="srK-yt-6sq" customClass="FeedRefreshViewController" customModule="EssentialFeediOS" customModuleProvider="target">
+                    <connections>
+                        <outlet property="view" destination="miA-sd-NIA" id="7tq-Ts-2z6"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1105.7971014492755" y="-11.383928571428571"/>
         </scene>
