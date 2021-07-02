@@ -74,6 +74,7 @@
 		45541E0A268DA978000B1340 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541E09268DA978000B1340 /* FeedLocalizationTests.swift */; };
 		45541E25268ED575000B1340 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541E24268ED575000B1340 /* MainQueueDispatchDecorator.swift */; };
 		45541E2C268ED5F8000B1340 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541E2B268ED5F8000B1340 /* WeakRefVirtualProxy.swift */; };
+		45541E33268ED651000B1340 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45541E32268ED650000B1340 /* FeedImageDataLoaderPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		45541E09268DA978000B1340 /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 		45541E24268ED575000B1340 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		45541E2B268ED5F8000B1340 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		45541E32268ED650000B1340 /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +511,7 @@
 				45541CDB268A2E34000B1340 /* FeedUIComposer.swift */,
 				45541E24268ED575000B1340 /* MainQueueDispatchDecorator.swift */,
 				45541E2B268ED5F8000B1340 /* WeakRefVirtualProxy.swift */,
+				45541E32268ED650000B1340 /* FeedImageDataLoaderPresentationAdapter.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 				45541E25268ED575000B1340 /* MainQueueDispatchDecorator.swift in Sources */,
 				45541BFE2686EFF5000B1340 /* FeedViewController.swift in Sources */,
 				45541BF72686EFD6000B1340 /* FeedImageCell.swift in Sources */,
+				45541E33268ED651000B1340 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				45541D0A268A4FB9000B1340 /* FeedImageViewModel.swift in Sources */,
 				45541CD4268A2988000B1340 /* FeedImageCellController.swift in Sources */,
 				45541CDC268A2E34000B1340 /* FeedUIComposer.swift in Sources */,
